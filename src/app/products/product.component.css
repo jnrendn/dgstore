@@ -1,0 +1,37 @@
+.box {
+    padding-left: 20px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background: #F8F3FF;
+    transition: 0.3s;
+    width: 210px;
+    height: 300px;
+    margin: 15px;
+    padding-bottom: 10px;
+    border-radius: 8%; 
+}
+ 
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+ 
+.container {
+    padding: 2px 16px;
+}
+
+.btn {
+    background: #CCFFE5;
+    font-size: 10px;
+    text-align: center;
+    margin: 3px;
+}
+
+.btn:hover {
+    background: #E2FFF1;
+}
+
+.hiden {
+    display: none;
+}

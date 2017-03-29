@@ -1,0 +1,17 @@
+<section class="box">
+    <div *ngFor="let prod of product | async " class="card col-lg-4 col-md-4 col-xs-6">
+      <div class="image">
+        <img  [src]="prod.productImage" alt="Avatar" style="width:100%">
+      </div>
+      <div class="container">
+        <h4><b>{{prod.productName}}</b></h4> 
+        <p>
+          precio: ${{prod.productPrice}}
+          cantidad: {{prod.productCant}}  
+        </p> 
+      </div>
+       <!--<button (click)="setCant(prod.id, true)" class="btn">Comprar</button>
+       <button (click)="setCant(prod.id, false)" class="btn">Deshacer</button>-->
+       <button (click)="method(prod.$key)" class="btn">Deshacer</button>
+    </div>
+</section>
