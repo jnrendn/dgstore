@@ -9,22 +9,26 @@ import { AngularFireModule } from 'angularfire2';
 import { AppComponent } from './app.component';
 
 import { firebaseConfig } from './../environments/firebase.config';
-import { ProductService } from './products/product.service';
 import { ProductComponent } from './products/product.component';
+import { UserComponent } from './users/user.component'; 
+
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductComponent
+    ProductComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     JsonpModule,
-    AngularFireModule.initializeApp(firebaseConfig)
+    AngularFireModule.initializeApp(firebaseConfig),
+    AppRoutingModule
   ],
-  providers: [ ProductService ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

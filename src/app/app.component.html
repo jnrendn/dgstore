@@ -1,10 +1,13 @@
-<div class="container">
-  <div class="panel panel-primary">
-    <div class="panel-heading"></div>
-    <div class="panel-body">
-      <h3>{{title}}</h3>
+<div class="panel panel-default col-lg-12">
+  <div class="panel-body">
+    <h3>{{title}}</h3>
+    <div class="menu">
+      <ul class="nav nav-pills">
+        <li role="presentation" class="active"><a routerLink="/">Home</a></li>
+        <li role="presentation" class="disabled"><a routerLink ="/">Profile</a></li>
+      </ul>
     </div>
   </div>
 </div>
+<router-outlet></router-outlet>
 
-<my-product></my-product>

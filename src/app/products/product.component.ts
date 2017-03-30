@@ -1,7 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-
-import { Product } from './product';
-import { ProductService } from './product.service';
+import { Component } from '@angular/core';
 
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
@@ -20,8 +17,8 @@ export class ProductComponent {
     this.product= af.database.list('/products');
     console.log(this.product)
   }
-  method( a: any ): void {
-      alert(a)
+  method(a:any):void {
+      alert('valor: $'+a);
   }
 
     // getProduct():void{
