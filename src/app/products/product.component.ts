@@ -11,40 +11,21 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 export class ProductComponent {
     product: FirebaseListObservable<any[]>;
+    prod: FirebaseListObservable<any[]>;
    
 
-    constructor(af:AngularFire){
+    constructor(public af:AngularFire){
     this.product= af.database.list('/products');
+
     console.log(this.product)
   }
-  method(a:any):void {
-      alert('valor: $'+a);
+  method(a:any, pc:number, k: any):void {
+    if(pc > 0){
+    alert('valor: $'+a);
+      this.prod = this.af.database.list(`/products`);
+      this.prod.update(k, { productCant:pc-1 });
+    }else{
+      alert('Producto agotado');
+    }
   }
-
-    // getProduct():void{
-    //     this.product =this.productService.getProduct()
-    // }
-
-    // ngOnInit():void{
-    //     this.getProduct();
-    //     console.log(this.product);
-    // }
-
-    // setCant(id:number, band:boolean):void {
-    //     console.log(id);
-    //     for(let i = 0; i < this.product.length; i++){
-    //         if(band == true){
-    //             if(this.product[i].id == id && this.product[i].productCant != 0){
-    //                 this.product[i].productCant -= 1;
-    //                 break;  
-    //             }
-    //         }else {
-    //             if(this.product[i].id == id){
-    //                 this.product[i].productCant += 1;
-    //                 break;
-    //             }  
-    //         }
-    //     }
-    // }
-
 }

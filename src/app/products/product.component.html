@@ -16,6 +16,6 @@
           cantidad: {{prod.productCant}}  
         </p> 
       </div>
-       <button (click)="method(prod.productPrice)" class="btn">Seleccionar</button>
+       <button (click)="method(prod.productPrice, prod.productCant, prod.$key)" class="btn">Seleccionar</button>
     </div>
 </section>
